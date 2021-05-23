@@ -12,4 +12,9 @@ public class Usuario extends Persona {
     private void consultarMotos() {
 
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

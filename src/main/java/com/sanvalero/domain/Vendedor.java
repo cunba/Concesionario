@@ -26,7 +26,9 @@ public class Vendedor extends Usuario {
 
     @Override
     public String toString() {
-        return "sueldo = '" + sueldo + '\'' +
+        return "Vendedor {'" + '\'' +
+                super.toString() +
+                ", sueldo = '" + sueldo + '\'' +
                 ", cochesVendidos = '" + cochesVendidos + '\'' +
                 '}';
     }

@@ -20,8 +20,10 @@ public class Coche extends Vehiculo {
 
     @Override
     public String toString() {
-        return "nPuertas=" + nPuertas + '\'' +
-                ", nAsientos=" + nAsientos +
+        return "Coche {" + '\'' +
+                super.toString() +
+                ", nPuertas = '" + nPuertas + '\'' +
+                ", nAsientos = '" + nAsientos + '\'' +
                 '}';
     }
 }

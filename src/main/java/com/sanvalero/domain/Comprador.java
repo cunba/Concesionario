@@ -26,8 +26,10 @@ public class Comprador extends Usuario {
 
     @Override
     public String toString() {
-        return "importeTotalCompras=" + importeTotalCompras + '\'' +
-                ", cochesComprados=" + cochesComprados + '\'' +
+        return "Comprador {'" + '\'' +
+                super.toString() +
+                ", importeTotalCompras = '" + importeTotalCompras + '\'' +
+                ", cochesComprados = '" + cochesComprados + '\'' +
                 '}';
     }
 
