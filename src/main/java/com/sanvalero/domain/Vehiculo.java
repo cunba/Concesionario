@@ -9,6 +9,7 @@ public class Vehiculo {
     private final String tipo;
     private final String tipoCombustible;
     private final int caballos;
+    private float precio;
 
     public Vehiculo(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos) {
         this.matricula = matricula;
@@ -43,6 +44,14 @@ public class Vehiculo {
         return caballos;
     }
 
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -64,6 +73,7 @@ public class Vehiculo {
                 ", modelo = '" + modelo + '\'' +
                 ", tipo = '" + tipo + '\'' +
                 ", tipoCombustible = '" + tipoCombustible + '\'' +
-                ", caballos = '" + caballos + '\'';
+                ", caballos = '" + caballos + '\'' +
+                ", precio = '" + precio + '\'';
     }
 }
