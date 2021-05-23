@@ -30,4 +30,16 @@ public class Vendedor extends Usuario {
                 ", cochesVendidos = '" + cochesVendidos + '\'' +
                 '}';
     }
+
+    public void calcularSueldo() {
+
+    }
+
+    public void venderCoche() {
+
+    }
+
+    public void registrarComprador() {
+
+    }
 }

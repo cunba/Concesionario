@@ -24,6 +24,13 @@ public class Comprador extends Usuario {
         this.cochesComprados = cochesComprados;
     }
 
+    @Override
+    public String toString() {
+        return "importeTotalCompras=" + importeTotalCompras + '\'' +
+                ", cochesComprados=" + cochesComprados + '\'' +
+                '}';
+    }
+
     public void comprarCoche() {
 
     }
