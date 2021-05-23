@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b81b9267-6a5d-469b-8b91-be5211d3f423" name="Default Changelist" comment="Crear clase usuario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
