@@ -1,5 +1,7 @@
 package com.sanvalero.domain;
 
+import java.util.ArrayList;
+
 public class Comprador extends Usuario {
     private float importeTotalCompras;
     private int cochesComprados;
@@ -33,7 +35,8 @@ public class Comprador extends Usuario {
                 '}';
     }
 
-    public void comprarCoche() {
-
+    public void comprarCoche(float importe) {
+        cochesComprados++;
+        importeTotalCompras = importeTotalCompras + importe;
     }
 }

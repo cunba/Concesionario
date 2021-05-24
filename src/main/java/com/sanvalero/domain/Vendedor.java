@@ -34,26 +34,12 @@ public class Vendedor extends Usuario {
                 "}";
     }
 
-    public float calcularSalarioMensual(ArrayList<Vendedor> vendedores, int id) {
-        float salario = 0;
-        for (int i = 0; i < vendedores.size(); i++) {
-            if (vendedores.get(i).equals(id)) {
-                Vendedor vendedor;
-                vendedor = vendedores.get(i);
-                salario = (float) (vendedor.getSueldo() + vendedor.getSueldo() * 0.2 * vendedor.getCochesVendidos());
-            }
-        }
-        return salario;
+    public float calcularSalarioMensual() {
+        return (float) (sueldo + sueldo * 0.2 * cochesVendidos);
     }
 
-    public void venderCoche(ArrayList<Vendedor> vendedores, int id) {
-        for (int i = 0; i < vendedores.size(); i++) {
-            if (vendedores.get(i).equals(id)) {
-                Vendedor vendedor;
-                vendedor = vendedores.get(i);
-                vendedor.setCochesVendidos(vendedor.getCochesVendidos() + 1);
-            }
-        }
+    public void venderCoche() {
+        cochesVendidos++;
     }
 
     public ArrayList<Comprador> registrarComprador(String nombre, String apellido, String dni, String telefono, String email, ArrayList<Comprador> compradores) {
