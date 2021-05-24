@@ -4,8 +4,8 @@ public class Comprador extends Usuario {
     private float importeTotalCompras;
     private int cochesComprados;
 
-    public Comprador(String id, String nombre, String apellido, String dni) {
-        super(id, nombre, apellido, dni);
+    public Comprador(int id, String nombre, String apellido, String dni, String telefono, String email) {
+        super(id, nombre, apellido, dni, telefono, email);
     }
 
     public float getImporteTotalCompras() {

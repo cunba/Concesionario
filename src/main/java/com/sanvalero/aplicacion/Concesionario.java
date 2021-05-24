@@ -63,40 +63,37 @@ public class Concesionario {
 
             switch (opcion) {
                 case "1":
-                    verVehiculo("1");
+                    verVehiculo("coche");
                     break;
                 case "2":
-                    verVehiculo("2");
+                    verVehiculo("moto");
                     break;
                 case "3":
-                    comprarVehiculo("1");
+                    comprarVehiculo("coche");
                     break;
                 case "4":
-                    comprarVehiculo("2");
+                    comprarVehiculo("moto");
                     break;
-                case "5":
-                    registrarPersona("1");
+                case "5": case "10":
+                    registrarPersona("comprador");
                     break;
                 case "6":
-                    verPersona("1");
+                    verPersona("comprador");
                     break;
                 case "7":
-                    verPersona("2");
+                    verPersona("vendedor");
                     break;
                 case "8":
-                    registrarVehiculo("1");
+                    registrarVehiculo("coche");
                     break;
                 case "9":
-                    registrarVehiculo("2");
-                    break;
-                case "10":
-                    registrarPersona("1");
+                    registrarVehiculo("moto");
                     break;
                 case "11":
-                    registrarPersona("2");
+                    registrarPersona("vendedor");
                     break;
                 case "12":
-                    registrarPersona("3");
+                    registrarPersona("administrador");
                 case "s": case "S":
                     salir();
                     break;
@@ -106,7 +103,7 @@ public class Concesionario {
         } while (!salir);
     }
 
-    public void registrarVehiculo(String opcion) {
+    public void registrarVehiculo(String vehiculo) {
         System.out.println("Escriba a continuación los datos del coche:");
         System.out.print("ID: ");
         String id = leer.nextLine();
@@ -122,17 +119,27 @@ public class Concesionario {
         String tipoCombustible = leer.nextLine();
         System.out.print("Caballos: ");
         int caballos = leer.nextInt();
-        System.out.print("Número de puertas: ");
-        int nPuertas = leer.nextInt();
-        System.out.print("Número de asientos: ");
-        int nAsientos = leer.nextInt();
         System.out.print("Precio: ");
         float precio = leer.nextFloat();
 
-        Coche coche = new Coche(matricula, marca, modelo, tipo, tipoCombustible, caballos, nPuertas, nAsientos);
-        coche.setPrecio(precio);
+        switch (vehiculo) {
+            case "coche":
+                System.out.print("Número de puertas: ");
+                int nPuertas = leer.nextInt();
+                System.out.print("Número de asientos: ");
+                int nAsientos = leer.nextInt();
 
-        coches.add(coche);
+
+
+                Coche coche = new Coche(matricula, marca, modelo, tipo, tipoCombustible, caballos, nPuertas, nAsientos);
+                coche.setPrecio(precio);
+
+                coches.add(coche);
+                break;
+
+            case "moto":
+                break;
+        }
 
         System.out.println(" ");
         otraOperacion();
@@ -150,7 +157,7 @@ public class Concesionario {
     public void registrarPersona(String opcion) {
         System.out.println("Escriba a continuación los datos del vendedor: ");
         System.out.print("ID: ");
-        String id = leer.nextLine();
+        int id = leer.nextInt();
         System.out.print("Nombre: ");
         String nombre = leer.nextLine();
         System.out.print("Apellido: ");

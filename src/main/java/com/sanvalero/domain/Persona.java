@@ -7,14 +7,16 @@ public class Persona {
     private final String nombre;
     private final String apellido;
     private final String dni;
-    private String telefono;
-    private String email;
+    private final String telefono;
+    private final String email;
 
-    public Persona(int id, String nombre, String apellido, String dni) {
+    public Persona(int id, String nombre, String apellido, String dni, String telefono, String email) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
+        this.telefono = telefono;
+        this.email = email;
     }
 
     public int getId() {
@@ -37,16 +39,8 @@ public class Persona {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     @Override

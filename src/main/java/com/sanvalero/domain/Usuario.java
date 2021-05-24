@@ -1,8 +1,8 @@
 package com.sanvalero.domain;
 
 public class Usuario extends Persona {
-    public Usuario(String id, String nombre, String apellido, String dni) {
-        super(id, nombre, apellido, dni);
+    public Usuario(int id, String nombre, String apellido, String dni, String telefono, String email) {
+        super(id, nombre, apellido, dni, telefono, email);
     }
 
     private void consultarCoches() {

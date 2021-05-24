@@ -4,8 +4,8 @@ public class Vendedor extends Usuario {
     private final float sueldo;
     private int cochesVendidos;
 
-    public Vendedor(String id, String nombre, String apellido, String dni, float sueldo) {
-        super(id, nombre, apellido, dni);
+    public Vendedor(int id, String nombre, String apellido, String dni, String telefono, String email, float sueldo) {
+        super(id, nombre, apellido, dni, telefono, email);
         this.sueldo = sueldo;
     }
 
@@ -30,7 +30,7 @@ public class Vendedor extends Usuario {
                 '}';
     }
 
-    public void calcularSueldoTotal() {
+    public void calcularSalarioMensual() {
 
     }
 
