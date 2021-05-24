@@ -1,19 +1,16 @@
 package com.sanvalero.domain;
 
 public class Vendedor extends Usuario {
-    private float sueldo;
+    private final float sueldo;
     private int cochesVendidos;
 
-    public Vendedor(String id, String nombre, String apellido, String dni) {
+    public Vendedor(String id, String nombre, String apellido, String dni, float sueldo) {
         super(id, nombre, apellido, dni);
+        this.sueldo = sueldo;
     }
 
     public float getSueldo() {
         return sueldo;
-    }
-
-    public void setSueldo(float sueldo) {
-        this.sueldo = sueldo;
     }
 
     public int getCochesVendidos() {
@@ -33,7 +30,7 @@ public class Vendedor extends Usuario {
                 '}';
     }
 
-    public void calcularSueldo() {
+    public void calcularSueldoTotal() {
 
     }
 

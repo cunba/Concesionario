@@ -3,21 +3,21 @@ package com.sanvalero.domain;
 import java.util.Objects;
 
 public class Persona {
-    private final String id;
+    private final int id;
     private final String nombre;
     private final String apellido;
     private final String dni;
     private String telefono;
     private String email;
 
-    public Persona(String id, String nombre, String apellido, String dni) {
+    public Persona(int id, String nombre, String apellido, String dni) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -54,7 +54,7 @@ public class Persona {
         if (this == o) return true;
         if (!(o instanceof Persona)) return false;
         Persona persona = (Persona) o;
-        return getId().equals(persona.getId());
+        return getId() == persona.getId();
     }
 
     @Override

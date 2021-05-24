@@ -3,13 +3,13 @@ package com.sanvalero.domain;
 import java.util.Objects;
 
 public class Venta {
-    private final String id;
+    private final int id;
     private final float importeVenta;
     private final String idVendedor;
     private final String idComprador;
     private final String matricula;
 
-    public Venta(String id, float importeVenta, String idVendedor, String idComprador, String matricula) {
+    public Venta(int id, float importeVenta, String idVendedor, String idComprador, String matricula) {
         this.id = id;
         this.importeVenta = importeVenta;
         this.idVendedor = idVendedor;
@@ -17,7 +17,7 @@ public class Venta {
         this.matricula = matricula;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -42,7 +42,7 @@ public class Venta {
         if (this == o) return true;
         if (!(o instanceof Venta)) return false;
         Venta venta = (Venta) o;
-        return getId().equals(venta.getId());
+        return getId() == venta.getId();
     }
 
     @Override
