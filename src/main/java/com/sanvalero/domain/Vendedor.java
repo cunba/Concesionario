@@ -6,11 +6,13 @@ public class Vendedor extends Usuario {
     private final float sueldo;
     private int cochesVendidos;
     private int idComprador;
+    private int idVenta;
 
     public Vendedor(int id, String nombre, String apellido, String dni, String telefono, String email, float sueldo) {
         super(id, nombre, apellido, dni, telefono, email);
         this.sueldo = sueldo;
         idComprador = 0;
+        idVenta = 0;
     }
 
     public float getSueldo() {
@@ -38,8 +40,15 @@ public class Vendedor extends Usuario {
         return (float) (sueldo + sueldo * 0.2 * cochesVendidos);
     }
 
-    public void venderCoche() {
+    public ArrayList<Venta> venderCoche(float importeVenta, String idVendedor, String idComprador, String matricula, ArrayList<Venta> ventas) {
         cochesVendidos++;
+
+        idVenta = ventas.size();
+
+        Venta venta = new Venta(idVenta, importeVenta, idVendedor, idComprador, matricula);
+
+        ventas.add(venta);
+        return ventas;
     }
 
     public ArrayList<Comprador> registrarComprador(String nombre, String apellido, String dni, String telefono, String email, ArrayList<Comprador> compradores) {
