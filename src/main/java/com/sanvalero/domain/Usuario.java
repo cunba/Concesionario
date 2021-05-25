@@ -8,22 +8,26 @@ public class Usuario extends Persona {
     }
 
     public Coche elegirCoche(ArrayList<Coche> coches, String matricula) {
-        Coche coche = new Coche(null, null, null, null, null, 0, 0, 0);
-        for (int i = 0; i < coches.size(); i++) {
-            if (coches.get(i).equals(matricula)) {
-                coche = coches.get(i);
+        Coche coche = new Coche(matricula, null, null, null, null, 0, 0, 0, 0);
+
+        for (Coche coche1 : coches) {
+            if (coche.equals(coche1)) {
+                coche = coche1;
             }
         }
+
         return coche;
     }
 
     public Moto elegirMoto(ArrayList<Moto> motos, String matricula) {
-        Moto moto = new Moto(null, null, null, null, null, 0);
-        for (int i = 0; i < motos.size(); i++) {
-            if (motos.get(i).equals(matricula)) {
-                moto = motos.get(i);
+        Moto moto = new Moto(matricula, null, null, null, null, 0, 0);
+
+        for (Moto moto1 : motos) {
+            if (moto.equals(moto1)) {
+                moto = moto1;
             }
         }
+
         return moto;
     }
 }

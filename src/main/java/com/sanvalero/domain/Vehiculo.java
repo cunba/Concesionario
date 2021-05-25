@@ -9,15 +9,16 @@ public class Vehiculo {
     private final String tipo;
     private final String tipoCombustible;
     private final int caballos;
-    private float precio;
+    private final float precio;
 
-    public Vehiculo(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos) {
+    public Vehiculo(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio) {
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
         this.tipo = tipo;
         this.tipoCombustible = tipoCombustible;
         this.caballos = caballos;
+        this.precio = precio;
     }
 
     public String getMatricula() {
@@ -44,13 +45,7 @@ public class Vehiculo {
         return caballos;
     }
 
-    public float getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
-    }
+    public float getPrecio() { return precio; }
 
     @Override
     public boolean equals(Object o) {

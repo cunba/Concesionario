@@ -1,61 +1,33 @@
 package com.sanvalero.domain;
 
-import java.util.ArrayList;
-
 public class Administrador extends Persona {
-    private int idVendedor;
-    private int idComprador;
-    private int idAdministrador;
-
     public Administrador(int id, String nombre, String apellido, String dni, String telefono, String email) {
         super(id, nombre, apellido, dni, telefono, email);
-        idVendedor = 0;
-        idComprador = 0;
-        idAdministrador = 0;
     }
 
-    public ArrayList<Vendedor> registrarVendedor(String nombre, String apellido, String dni, String telefono, String email, float sueldo, ArrayList<Vendedor> vendedores) {
-        idVendedor = vendedores.size();
-
-        Vendedor vendedor = new Vendedor(idVendedor, nombre, apellido, dni, telefono, email, sueldo);
-        vendedor.setCochesVendidos(0);
-
-        vendedores.add(vendedor);
-        return vendedores;
+    public Vendedor registrarVendedor(int id, String nombre, String apellido, String dni, String telefono, String email, float sueldo) {
+        Vendedor vendedor = new Vendedor(id, nombre, apellido, dni, telefono, email, sueldo);
+        vendedor.setVehiculosVendidos(0);
+        return vendedor;
     }
 
-    public ArrayList<Comprador> registrarComprador(String nombre, String apellido, String dni, String telefono, String email, ArrayList<Comprador> compradores) {
-        idComprador = compradores.size();
-
-        Comprador comprador = new Comprador(idComprador, nombre, apellido, dni, telefono, email);
+    public Comprador registrarComprador(int id, String nombre, String apellido, String dni, String telefono, String email) {
+        Comprador comprador = new Comprador(id, nombre, apellido, dni, telefono, email);
         comprador.setImporteTotalCompras(0);
-        comprador.setCochesComprados(0);
-
-        compradores.add(comprador);
-        return compradores;
+        comprador.setVehiculosComprados(0);
+        return comprador;
     }
 
-    public ArrayList<Administrador> registrarAdministrador(String nombre, String apellido, String dni, String telefono, String email, ArrayList<Administrador> administradores) {
-        idAdministrador = administradores.size();
-
-        Administrador administrador = new Administrador(idAdministrador, nombre, apellido, dni, telefono, email);
-
-        administradores.add(administrador);
-        return administradores;
+    public Administrador registrarAdministrador(int id, String nombre, String apellido, String dni, String telefono, String email) {
+        return new Administrador(id, nombre, apellido, dni, telefono, email);
     }
 
-    public ArrayList<Coche> registrarCoche(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, int nPuertas, int nAsientos, ArrayList<Coche> coches) {
-        Coche coche = new Coche(matricula, marca, modelo, tipo, tipoCombustible, caballos, nPuertas, nAsientos);
-
-        coches.add(coche);
-        return coches;
+    public Coche registrarCoche(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio, int nPuertas, int nAsientos) {
+        return new Coche(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio, nPuertas, nAsientos);
     }
 
-    public ArrayList<Moto> registrarMoto(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, ArrayList<Moto> motos) {
-        Moto moto = new Moto(matricula, marca, modelo, tipo, tipoCombustible, caballos);
-
-        motos.add(moto);
-        return motos;
+    public Moto registrarMoto(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio) {
+        return new Moto(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio);
     }
 
     @Override

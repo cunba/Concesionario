@@ -1,10 +1,8 @@
 package com.sanvalero.domain;
 
-import java.util.ArrayList;
-
 public class Comprador extends Usuario {
     private float importeTotalCompras;
-    private int cochesComprados;
+    private int vehiculosComprados;
 
     public Comprador(int id, String nombre, String apellido, String dni, String telefono, String email) {
         super(id, nombre, apellido, dni, telefono, email);
@@ -18,12 +16,12 @@ public class Comprador extends Usuario {
         this.importeTotalCompras = importeTotalCompras;
     }
 
-    public int getCochesComprados() {
-        return cochesComprados;
+    public int getVehiculosComprados() {
+        return vehiculosComprados;
     }
 
-    public void setCochesComprados(int cochesComprados) {
-        this.cochesComprados = cochesComprados;
+    public void setVehiculosComprados(int vehiculosComprados) {
+        this.vehiculosComprados = vehiculosComprados;
     }
 
     @Override
@@ -31,12 +29,12 @@ public class Comprador extends Usuario {
         return "Comprador {'" + '\'' +
                 super.toString() +
                 ", importeTotalCompras = '" + importeTotalCompras + '\'' +
-                ", cochesComprados = '" + cochesComprados + '\'' +
+                ", cochesComprados = '" + vehiculosComprados + '\'' +
                 '}';
     }
 
-    public void comprarCoche(float importe) {
-        cochesComprados++;
+    public void comprarVehiculo(float importe) {
+        vehiculosComprados++;
         importeTotalCompras = importeTotalCompras + importe;
     }
 }
