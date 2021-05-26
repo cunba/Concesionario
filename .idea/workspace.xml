@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b81b9267-6a5d-469b-8b91-be5211d3f423" name="Default Changelist" comment="- Creación clase coche&#10;- modificación clase vehiculo">
+    <list default="true" id="b81b9267-6a5d-469b-8b91-be5211d3f423" name="Default Changelist" comment="- Creacion de tests">
+      <change beforePath="$PROJECT_DIR$/.idea/AAConcesionario.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +36,99 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../1ª Evaluación/Examen Enero/ExamenWebinar" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\irecu\Documents\Entornos de desarrollo\2ª Evaluación\AAConcesionario" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\irecu\Documents\Entornos de desarrollo\2ª Evaluación\AAConcesionario" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Aplicacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sanvalero.aplicacion.Aplicacion" />
+      <module name="AAConcesionario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sanvalero.aplicacion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuarioTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AAConcesionario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sanvalero.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sanvalero.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sanvalero.domain.UsuarioTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiculoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AAConcesionario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sanvalero.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sanvalero.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sanvalero.domain.VehiculoTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendedorTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AAConcesionario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sanvalero.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sanvalero.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sanvalero.domain.VendedorTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VentaTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AAConcesionario" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sanvalero.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sanvalero.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.sanvalero.domain.VentaTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Aplicacion" />
+        <item itemvalue="JUnit.VentaTests" />
+        <item itemvalue="JUnit.VendedorTests" />
+        <item itemvalue="JUnit.VehiculoTests" />
+        <item itemvalue="JUnit.UsuarioTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -102,7 +195,119 @@
       <option name="project" value="LOCAL" />
       <updated>1621795594887</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="crear clase moto">
+      <created>1621796169692</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1621796169692</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modificación método toString en todas las clases">
+      <created>1621796562067</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1621796562067</updated>
+    </task>
+    <task id="LOCAL-00011" summary="creación clase venta">
+      <created>1621796892699</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621796892699</updated>
+    </task>
+    <task id="LOCAL-00012" summary="creación clase administrador">
+      <created>1621797299177</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1621797299177</updated>
+    </task>
+    <task id="LOCAL-00013" summary="creación clase aplicación">
+      <created>1621866341185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1621866341185</updated>
+    </task>
+    <task id="LOCAL-00014" summary="-Creacion clase Concesionario&#10;-Modificacion tipo de id en persona, vendedor y venta, pasa de String a int">
+      <created>1621879559094</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1621879559094</updated>
+    </task>
+    <task id="LOCAL-00015" summary="-programacion metodos de administrador&#10;-modificacion codigo">
+      <created>1621885391732</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1621885391732</updated>
+    </task>
+    <task id="LOCAL-00016" summary="-modificacion metodos administrador por ArrayList">
+      <created>1621886562095</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1621886562095</updated>
+    </task>
+    <task id="LOCAL-00017" summary="-programacion metodos usuario">
+      <created>1621887572421</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1621887572421</updated>
+    </task>
+    <task id="LOCAL-00018" summary="-programacion metodos vendedor">
+      <created>1621890158107</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1621890158107</updated>
+    </task>
+    <task id="LOCAL-00019" summary="-programacion metodos comprador&#10;-modificacion metodos vendedor">
+      <created>1621891419637</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1621891419637</updated>
+    </task>
+    <task id="LOCAL-00020" summary="-modificar metodo venderCoche de vendedor">
+      <created>1621892090850</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1621892090850</updated>
+    </task>
+    <task id="LOCAL-00021" summary="-creacion metodos concesionario&#10;-modificacion clases existentes">
+      <created>1621907642192</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1621907642192</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- pruebas de funcionamiento&#10;- resolucion de errores de codigo&#10;- añadir comentarios a los metodos">
+      <created>1621994922480</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1621994922480</updated>
+    </task>
+    <task id="LOCAL-00023" summary="- Creacion de readme&#10;- Creacion de sonar properties">
+      <created>1621995536529</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1621995536529</updated>
+    </task>
+    <task id="LOCAL-00024" summary="- Creacion de tests">
+      <created>1622004630519</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1622004630519</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +331,22 @@
     <MESSAGE value="- Crear clase vendedor&#10;- modificar clase persona" />
     <MESSAGE value="- modificar comprador&#10;- modificar vendedor&#10;- modificar gitignore" />
     <MESSAGE value="- Creación clase coche&#10;- modificación clase vehiculo" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Creación clase coche&#10;- modificación clase vehiculo" />
+    <MESSAGE value="crear clase moto" />
+    <MESSAGE value="Modificación método toString en todas las clases" />
+    <MESSAGE value="creación clase venta" />
+    <MESSAGE value="creación clase administrador" />
+    <MESSAGE value="creación clase aplicación" />
+    <MESSAGE value="-Creacion clase Concesionario&#10;-Modificacion tipo de id en persona, vendedor y venta, pasa de String a int" />
+    <MESSAGE value="-programacion metodos de administrador&#10;-modificacion codigo" />
+    <MESSAGE value="-modificacion metodos administrador por ArrayList" />
+    <MESSAGE value="-programacion metodos usuario" />
+    <MESSAGE value="-programacion metodos vendedor" />
+    <MESSAGE value="-programacion metodos comprador&#10;-modificacion metodos vendedor" />
+    <MESSAGE value="-modificar metodo venderCoche de vendedor" />
+    <MESSAGE value="-creacion metodos concesionario&#10;-modificacion clases existentes" />
+    <MESSAGE value="- pruebas de funcionamiento&#10;- resolucion de errores de codigo&#10;- añadir comentarios a los metodos" />
+    <MESSAGE value="- Creacion de readme&#10;- Creacion de sonar properties" />
+    <MESSAGE value="- Creacion de tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Creacion de tests" />
   </component>
 </project>
