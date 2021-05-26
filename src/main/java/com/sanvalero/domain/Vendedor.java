@@ -23,10 +23,10 @@ public class Vendedor extends Usuario {
 
     @Override
     public String toString() {
-        return "Vendedor {'" + '\'' +
+        return "Vendedor {" +
                 super.toString() +
                 ", sueldo = '" + sueldo + '\'' +
-                ", cochesVendidos = '" + vehiculosVendidos + '\'' +
+                ", vehiculosVendidos = '" + vehiculosVendidos + '\'' +
                 "}";
     }
 

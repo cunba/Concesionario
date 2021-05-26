@@ -2,7 +2,11 @@ package com.sanvalero.domain;
 
 import java.util.Objects;
 
+/**
+ * Metodo correspondiente a vehiculo. Es la clase madre de coche y moto
+ */
 public class Vehiculo {
+    //Declaracion de elementos de un vehiculo
     private final String matricula;
     private final String marca;
     private final String modelo;
@@ -11,6 +15,16 @@ public class Vehiculo {
     private final int caballos;
     private final float precio;
 
+    /**
+     * Constructor de vehiculo
+     * @param matricula del vehiculo
+     * @param marca del vehiculo
+     * @param modelo del vehiculo
+     * @param tipo del vehiculo
+     * @param tipoCombustible del vehiculo
+     * @param caballos del vehiculo
+     * @param precio del vehiculo
+     */
     public Vehiculo(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio) {
         this.matricula = matricula;
         this.marca = marca;
@@ -21,6 +35,10 @@ public class Vehiculo {
         this.precio = precio;
     }
 
+    /**
+     * Metodo que obtiene la matricula del vehiculo
+     * @return matricula
+     */
     public String getMatricula() {
         return matricula;
     }
@@ -45,8 +63,17 @@ public class Vehiculo {
         return caballos;
     }
 
+    /**
+     * Metodo que obtiene el precio del vehiculo
+     * @return precio
+     */
     public float getPrecio() { return precio; }
 
+    /**
+     * Metodo que osbreescribe la funcion equals
+     * @param o vehiculo
+     * @return TRUE si las matriculas coinciden o FALSE si las matriculas no coinciden
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -55,11 +82,19 @@ public class Vehiculo {
         return getMatricula().equals(vehiculo.getMatricula());
     }
 
+    /**
+     * Metodo que sobreescribe la funcion hashCode()
+     * @return
+     */
     @Override
     public int hashCode() {
         return Objects.hash(getMatricula());
     }
 
+    /**
+     * Metodo que sobreescribe la funcion toString()
+     * @return los elementos del vehiculo en el formato que hemos definito
+     */
     @Override
     public String toString() {
         return "matricula = '" + matricula + '\'' +
