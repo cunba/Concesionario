@@ -14,8 +14,8 @@ public class Moto extends Vehiculo {
      * @param caballos de la moto
      * @param precio de la moto
      */
-    public Moto(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio) {
-        super(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio);
+    public Moto(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio, boolean disponible) {
+        super(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio, disponible);
     }
 
     /**

@@ -20,8 +20,8 @@ public class Coche extends Vehiculo {
      * @param nPuertas del coche
      * @param nAsientos del coche
      */
-    public Coche(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio, int nPuertas, int nAsientos) {
-        super(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio);
+    public Coche(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio, boolean disponible, int nPuertas, int nAsientos) {
+        super(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio, disponible);
         this.nPuertas = nPuertas;
         this.nAsientos = nAsientos;
     }

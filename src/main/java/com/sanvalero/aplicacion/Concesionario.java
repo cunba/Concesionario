@@ -49,8 +49,8 @@ public class Concesionario {
             System.out.println("|___________________________________________________________________________________________|");
             System.out.println();
             System.out.println(" ACCIONES DE USUARIO: ");
-            System.out.println("    1.  Visualizar coches");
-            System.out.println("    2.  Visualizar motos");
+            System.out.println("    1.  Visualizar coches disponibles");
+            System.out.println("    2.  Visualizar motos disponibles");
             System.out.println();
             System.out.println(" ACCIONES DE COMPRADOR: ");
             System.out.println("    3.  Comprar coche (se necesita estar registrado)");
@@ -74,7 +74,9 @@ public class Concesionario {
             System.out.println("   17.  Visualizar compradores");
             System.out.println("   18.  Visualizar vendedores");
             System.out.println("   19.  Visualizar ventas");
-            System.out.println("   20.  Ver información de usuario");
+            System.out.println("   20.  Visualizar todos los coches");
+            System.out.println("   21.  Visualizar todas las motos");
+            System.out.println("   22.  Ver información de usuario");
             System.out.println();
             System.out.println(" Si no desea realizar ninguna acción:");
             System.out.println("    S.  Salir.");
@@ -141,6 +143,12 @@ public class Concesionario {
                     ver("ventas", "");
                     break;
                 case "20":
+                    ver("coches", "administrador");
+                    break;
+                case "21":
+                    ver("motos", "administrador");
+                    break;
+                case "22":
                     ver("administrador", "");
                     break;
                 case "s": case "S":
@@ -235,16 +243,78 @@ public class Concesionario {
 
         switch (opcion1) {
             case "coches":
-                System.out.println();
-                for (Coche coche : coches) {
-                    System.out.println(coche.toString());
+                if (opcion2.equals("administrador")) {
+                    try {
+                        System.out.print("Introduzca su ID de administrador: ");
+                        id = Integer.parseInt(leer.nextLine());
+
+                        //Comprobamos si existe el administrador
+                        for (Administrador administrador : administradores) {
+                            if (administrador.getId() == id) {
+                                idValido = true;
+                                break;
+                            }
+                        }
+
+                        System.out.println();
+
+                        //Si el administrador existe imprimimos todos los elementos de la lista administradores
+                        if (idValido) {
+                            for (Coche coche : coches) {
+                                System.out.println(coche.toString());
+                            }
+                        } else {
+                            System.out.println("El ID introducido no es válido. Inténtelo de nuevo.");
+                        }
+                    } catch (Exception e) {
+                        System.out.println(" ");
+                        System.out.println("El ID introducido no es válido. Inténtelo de nuevo.");
+                    }
+                } else {
+                    System.out.println();
+                    for (Coche coche : coches) {
+                        if (coche.isDisponible()) {
+                            System.out.println(coche);
+                        }
+                    }
                 }
                 break;
 
             case "motos":
-                System.out.println();
-                for (Moto moto : motos) {
-                    System.out.println(moto.toString());
+                if (opcion2.equals("administrador")) {
+                    try {
+                        System.out.print("Introduzca su ID de administrador: ");
+                        id = Integer.parseInt(leer.nextLine());
+
+                        //Comprobamos si existe el administrador
+                        for (Administrador administrador : administradores) {
+                            if (administrador.getId() == id) {
+                                idValido = true;
+                                break;
+                            }
+                        }
+
+                        System.out.println();
+
+                        //Si el administrador existe imprimimos todos los elementos de la lista administradores
+                        if (idValido) {
+                            for (Moto moto : motos) {
+                                System.out.println(moto.toString());
+                            }
+                        } else {
+                            System.out.println("El ID introducido no es válido. Inténtelo de nuevo.");
+                        }
+                    } catch (Exception e) {
+                        System.out.println(" ");
+                        System.out.println("El ID introducido no es válido. Inténtelo de nuevo.");
+                    }
+                } else {
+                    System.out.println();
+                    for (Moto moto : motos) {
+                        if (moto.isDisponible()) {
+                            System.out.println(moto);
+                        }
+                    }
                 }
                 break;
 
@@ -605,6 +675,7 @@ public class Concesionario {
                             Venta venta = new Venta(idVenta, coche.getPrecio(),null, comprador.getId(), coche.getMatricula());
                             ventas.add(venta);
 
+                            coche.setDisponible(false);
                             comprador.comprarVehiculo(coche.getPrecio());
 
                             System.out.println();
@@ -630,6 +701,7 @@ public class Concesionario {
                             Venta venta = new Venta(idVenta, moto.getPrecio(), null, comprador.getId(), moto.getMatricula());
                             ventas.add(venta);
 
+                            moto.setDisponible(false);
                             comprador.comprarVehiculo(moto.getPrecio());
 
                             System.out.println();
@@ -707,6 +779,7 @@ public class Concesionario {
                                 Venta venta = new Venta(idVenta, coche.getPrecio(), String.valueOf(vendedor.getId()), comprador.getId(), coche.getMatricula());
                                 ventas.add(venta);
 
+                                coche.setDisponible(false);
                                 vendedor.venderVehiculo();
                                 comprador.comprarVehiculo(coche.getPrecio());
 
@@ -750,6 +823,7 @@ public class Concesionario {
                                 Venta venta = new Venta(idVenta, moto.getPrecio(), String.valueOf(vendedor.getId()), comprador.getId(), moto.getMatricula());
                                 ventas.add(venta);
 
+                                moto.setDisponible(false);
                                 vendedor.venderVehiculo();
                                 comprador.comprarVehiculo(moto.getPrecio());
 
@@ -811,10 +885,11 @@ public class Concesionario {
      * Metodo que pregunta si queremos realizar otra operacion despues de la realizada
      */
     private void otraOperacion() {
-        System.out.print("¿Está seguro que quiere salir de la aplicación?(S o N): ");
+
+        System.out.print("¿Desea realizar otra operación?(S o N): ");
         String opcion = leer.nextLine();
 
-        while (!opcion.equalsIgnoreCase("s") || !opcion.equalsIgnoreCase("n")) {
+        while (!opcion.equalsIgnoreCase("s") && !opcion.equalsIgnoreCase("n")) {
             System.out.print("Opción incorrecta, escriba S o N: ");
             opcion = leer.nextLine();
         }
@@ -831,7 +906,7 @@ public class Concesionario {
         System.out.print("¿Está seguro que quiere salir de la aplicación?(S o N): ");
         String opcion = leer.nextLine();
 
-        while (!opcion.equalsIgnoreCase("s") || !opcion.equalsIgnoreCase("n")) {
+        while (!opcion.equalsIgnoreCase("s") && !opcion.equalsIgnoreCase("n")) {
             System.out.print("Opción incorrecta, escriba S o N: ");
             opcion = leer.nextLine();
         }

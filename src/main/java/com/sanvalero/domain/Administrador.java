@@ -29,9 +29,7 @@ public class Administrador extends Persona {
      * @return devuelve el vendedor ya creado
      */
     public Vendedor registrarVendedor(int id, String nombre, String apellido, String dni, String telefono, String email, float sueldo) {
-        Vendedor vendedor = new Vendedor(id, nombre, apellido, dni, telefono, email, sueldo);
-        vendedor.setVehiculosVendidos(0);
-        return vendedor;
+        return new Vendedor(id, nombre, apellido, dni, telefono, email, sueldo, 0);
     }
 
     /**
@@ -62,7 +60,7 @@ public class Administrador extends Persona {
      * @return devuelve el coche creado
      */
     public Coche registrarCoche(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio, int nPuertas, int nAsientos) {
-        return new Coche(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio, nPuertas, nAsientos);
+        return new Coche(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio, true, nPuertas, nAsientos);
     }
 
     /**
@@ -77,7 +75,7 @@ public class Administrador extends Persona {
      * @return devuelve la moto ya creada
      */
     public Moto registrarMoto(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio) {
-        return new Moto(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio);
+        return new Moto(matricula, marca, modelo, tipo, tipoCombustible, caballos, precio, true);
     }
 
     /**

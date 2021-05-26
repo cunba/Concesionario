@@ -9,7 +9,7 @@ public class VendedorTests {
 
     @BeforeAll
     public static void beforeAll() {
-        vendedor = new Vendedor(0, "a", "b", "c", "d", "e", 1000);
+        vendedor = new Vendedor(0, "a", "b", "c", "d", "e", 1000, 0);
     }
 
     @Test

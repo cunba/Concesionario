@@ -4,9 +4,10 @@ public class Vendedor extends Usuario {
     private final float sueldo;
     private int vehiculosVendidos;
 
-    public Vendedor(int id, String nombre, String apellido, String dni, String telefono, String email, float sueldo) {
+    public Vendedor(int id, String nombre, String apellido, String dni, String telefono, String email, float sueldo, int vehiculosVendidos) {
         super(id, nombre, apellido, dni, telefono, email);
         this.sueldo = sueldo;
+        this.vehiculosVendidos = vehiculosVendidos;
     }
 
     public float getSueldo() {

@@ -14,6 +14,7 @@ public class Vehiculo {
     private final String tipoCombustible;
     private final int caballos;
     private final float precio;
+    private boolean disponible;
 
     /**
      * Constructor de vehiculo
@@ -25,7 +26,7 @@ public class Vehiculo {
      * @param caballos del vehiculo
      * @param precio del vehiculo
      */
-    public Vehiculo(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio) {
+    public Vehiculo(String matricula, String marca, String modelo, String tipo, String tipoCombustible, int caballos, float precio, boolean disponible) {
         this.matricula = matricula;
         this.marca = marca;
         this.modelo = modelo;
@@ -33,6 +34,7 @@ public class Vehiculo {
         this.tipoCombustible = tipoCombustible;
         this.caballos = caballos;
         this.precio = precio;
+        this.disponible = disponible;
     }
 
     /**
@@ -63,6 +65,14 @@ public class Vehiculo {
         return caballos;
     }
 
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
     /**
      * Metodo que obtiene el precio del vehiculo
      * @return precio
@@ -82,10 +92,6 @@ public class Vehiculo {
         return getMatricula().equals(vehiculo.getMatricula());
     }
 
-    /**
-     * Metodo que sobreescribe la funcion hashCode()
-     * @return
-     */
     @Override
     public int hashCode() {
         return Objects.hash(getMatricula());
@@ -103,6 +109,7 @@ public class Vehiculo {
                 ", tipo = '" + tipo + '\'' +
                 ", tipoCombustible = '" + tipoCombustible + '\'' +
                 ", caballos = '" + caballos + '\'' +
-                ", precio = '" + precio + '\'';
+                ", precio = '" + precio + '\'' +
+                ", disponible = '" + disponible + '\'';
     }
 }

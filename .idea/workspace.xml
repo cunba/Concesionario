@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b81b9267-6a5d-469b-8b91-be5211d3f423" name="Default Changelist" comment="- Creacion de tests">
-      <change beforePath="$PROJECT_DIR$/.idea/AAConcesionario.iml" beforeDir="false" />
+    <list default="true" id="b81b9267-6a5d-469b-8b91-be5211d3f423" name="Default Changelist" comment="Rama final. Proyecto terminado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/aplicacion/Concesionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/aplicacion/Concesionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Coche.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Coche.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Moto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Moto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sanvalero/domain/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/AdministradorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/AdministradorTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/UsuarioTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/UsuarioTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/VehiculoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/VehiculoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/VendedorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sanvalero/domain/VendedorTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +55,7 @@
       <recent name="C:\Users\irecu\Documents\Entornos de desarrollo\2ª Evaluación\AAConcesionario" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Aplicacion">
     <configuration name="Aplicacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sanvalero.aplicacion.Aplicacion" />
       <module name="AAConcesionario" />
@@ -123,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Aplicacion" />
+        <item itemvalue="JUnit.UsuarioTests" />
         <item itemvalue="JUnit.VentaTests" />
         <item itemvalue="JUnit.VendedorTests" />
         <item itemvalue="JUnit.VehiculoTests" />
-        <item itemvalue="JUnit.UsuarioTests" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622004630519</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Rama final. Proyecto terminado">
+      <created>1622005038210</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1622005038210</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,6 +363,7 @@
     <MESSAGE value="- pruebas de funcionamiento&#10;- resolucion de errores de codigo&#10;- añadir comentarios a los metodos" />
     <MESSAGE value="- Creacion de readme&#10;- Creacion de sonar properties" />
     <MESSAGE value="- Creacion de tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Creacion de tests" />
+    <MESSAGE value="Rama final. Proyecto terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rama final. Proyecto terminado" />
   </component>
 </project>
