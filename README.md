@@ -1,9 +1,7 @@
 # CONCESIONARIO
 
-_Aplicación que permite llevar un seguimiento de un concesionario pudiendo registrar y visualizar
-vehículos, personas y ventas._
-
-_Además se pueden realizar compras y ventas de las vehiculos y calcular el salario mensual de un vendedor_
+_Aplicación que permite comprar y vender vehículos como si fuese un concesionario. 
+Además disponemos de varios tipos de registros (como comprador, vendedor o administrador) y diferentes funcionalidades según el tipo de usuario que seas._
 
 ## Comenzando 🚀
 
